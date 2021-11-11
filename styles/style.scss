@@ -1,5 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@300&display=swap");
 * {
-	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+h1,
+h2 {
+	font-family: "Creepster", cursive;
+}
+.resultbutton {
+	font-family: "Creepster", cursive;
+}
+h1 {
+	color: #ff9900;
+	font-size: 4em;
+	text-align: center;
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+		1px 1px 0 #fff;
+	letter-spacing: 5px;
+}
+h2 {
+	font-size: 3em;
+}
+h2,
+p {
+	color: #fff;
+}
+#movieDiv {
+	p {
+		font-size: 2em;
+	}
+}
+label,
+button {
+	font-family: "Roboto", sans-serif;
+	font-size: 1.5em;
+	cursor: pointer;
+	border: none;
+}
+@media screen and (max-width: 481px) {
+	button {
+		font-size: 1em;
+	}
+}
+label {
+	color: #fff;
+}
+input[type="text"] {
+	width: 100%;
+	border-radius: 15px;
+	height: 2em;
+	padding-left: 0.5em;
+}
+body {
+	background-color: #210026;
+	background: linear-gradient(180deg, #290030 0%, #210026 100%);
+}
+/* ------------------- */
+* {
+	/* margin: 0; */
 	box-sizing: border-box;
 }
 
@@ -26,8 +83,8 @@ input[type="text"] {
 }
 
 label {
-	font-size: 2rem;
-	margin-bottom: 7%;
+	/* font-size: 2rem; */
+	margin-bottom: 1em;
 }
 
 #startButton {
@@ -38,31 +95,29 @@ label {
 	font-size: 2rem;
 	margin-top: 1rem;
 	width: 100%;
-	padding: 1rem;
+	height: 2em;
 	border-radius: 15px;
 }
 
-#btn_Last {
+.resultbutton {
 	text-align: center;
 	padding: 100%;
 	margin-top: 7rem;
 	background-color: white;
-
 	font-size: 2rem;
 	margin-top: 1rem;
 	width: 25rem;
-	padding: 1rem;
 	border-radius: 15px;
 }
 
-a #btn_Last {
+a {
 	margin-top: 4rem;
 }
 
 /* SECOND SECTION   */
 section {
 	height: 100vh;
-	background-image: repeating-linear-gradient(145deg, #ff9900, #515151);
+	/* 	background-image: repeating-linear-gradient(145deg, #ff9900, #515151); */
 }
 
 .answer_wrapper {
@@ -74,23 +129,40 @@ section {
 
 .answers {
 	background: white;
-	width: 9rem;
-	height: 9rem;
+	width: 15rem;
+	height: 15rem;
 	border-radius: 15px;
 	//margin: 1rem;
 	//margin-top: 2rem;
 }
-
+@media screen and (max-width: 521px) {
+	.answer_wrapper {
+		grid-gap: 0.5rem;
+	}
+	.answers {
+		width: 12rem;
+		height: 12rem;
+	}
+}
+@media screen and (max-width: 481px) {
+	.answer_wrapper {
+		grid-gap: 0.5rem;
+	}
+	.answers {
+		width: 9rem;
+		height: 9rem;
+	}
+}
 a {
 	border-radius: 15px;
 }
 
 // Disables scroll and keeps the smooth scroll on pressing a button.
 // And sometimes messes up the height of section_start
-// html,
-// body {
-// 	overflow: hidden;
-// }
+/* html,
+body {
+	overflow: hidden;
+} */
 
 .resultsH1 {
 	font-size: 2.5rem;
@@ -106,4 +178,19 @@ a {
 	width: 100%;
 	padding: 1rem;
 	border-radius: 15px;
+}
+#section10-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1em;
+	#posterDiv {
+		img {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 481px) {
+	#section10-wrapper {
+		grid-template-columns: 1fr;
+	}
 }

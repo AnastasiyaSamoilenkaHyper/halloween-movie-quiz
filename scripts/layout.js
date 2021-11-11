@@ -33,25 +33,10 @@ function createForm() {
 }
 
 function createBtn(btnText, btnClass, btnSectionId) {
-	//btnId
-	/* let div = document.getElementById(btnSectionId + "Div"); */
-	/* let anchor = document.createElement("a"); */
 	let button = document.createElement("button");
-	//anchor.setAttribute("href", link);
-	/* console.log(div) */
-
-
-	// window.location.href = "#section1";
-
-
-
-
-
-	//button.id = btnId;
 	button.innerHTML = btnText;
-	button.className = btnClass;
-
-	
+  button.className = btnClass;
+  
 	return button;
 }
 
@@ -59,7 +44,6 @@ function createDiv(id, className, appendPlace) {
 	let div = document.createElement("div");
 	div.id = id;
 	div.className = className;
-
 	appendPlace.append(div);
 
 	return div;
@@ -87,15 +71,10 @@ function createContent(section, section_id, QnA) {
 	let question = document.createElement("label");
 	question.innerHTML = QnA.question;
 	section.append(question);
-/* 	console.log("tag", section, "id", section.id);
-	console.log("id", section_id); */
-
-
-
 
 	//Div BtnWrapper
 	let div = createDiv(section.id + "Div", "answer_wrapper", section);
-	//===============NEW
+
 	div.addEventListener("click", function (event) {
 		if (event.target.tagName === "BUTTON") {
 			console.log("class is", event.target.classList[0]);
@@ -104,26 +83,12 @@ function createContent(section, section_id, QnA) {
 			recordUserAnswerToArray(userAnswer);
 			window.location.href = "#section" + (section_id + 1).toString();
 			console.log("#section" + (section_id + 1).toString())
-			
-			/* console.log(section.id) */
 		}
 	});
 
-	//===============END NEW
 	// Buttons
 	for (let i = 0; i < QnA.answers.length; i++) {
-		let button = createBtn(
-			// section.id + "button", // this creates not unique IDs for buttons, so now all buttons in one section have the same IDs
-			QnA.answers[i],
-			// "#section" + (section_id + 1).toString(),
-			// "answers"
-			`${answerCategory[i]} answers`,
-			//btnSectionId
-			section.id
-		);
-
-/* 		console.log(section_id, "__id");
-		console.log(section.id, ".id"); */
+		let button = createBtn(	QnA.answers[i],`${answerCategory[i]} answers`, section.id);
 		div.append(button);
 	}
 }
@@ -140,9 +105,7 @@ async function getQuestions() {
 			//CONTENT
 			createContent(section, i, questionsAsJson[i]);
 		}
-		//dont want to execute second function WHYYY????
 		createSubmitResultsSection();
-		// createResultSection();
 	} catch (error) {
 		console.log("error", error);
 	}
@@ -166,10 +129,8 @@ function recordUserAnswerToArray(userAnswer) {
 		console.log(arrayOfUserAnswers);
 	}
 }
-//To calculate a category with biggest click number
 
 let resultCategory = "";
-//when btn is clicked corresponding clickNumber must be increased by 1
 
 // returns a letter
 function getCategory() {
@@ -181,7 +142,6 @@ function getCategory() {
 			categoriesIndex.push(i);
 		}
 	}
-	// console.log(categoriesIndex, "Categories");
 	let randomIndex =
 		categoriesIndex[Math.floor(Math.random() * categoriesIndex.length)];
 	let letter = answerCategory[randomIndex];
@@ -189,15 +149,10 @@ function getCategory() {
 }
 
 import { sendResultToFirebase } from "./firebase.js";
+
 //Submit results page
 function createSubmitResultsSection() {
 	let section = createSection("section9");
-
-	//Text "Click this btn to see your results"
-	/* let showResultsText = document.createElement("label");
-	showResultsText.innerHTML = "Click this button to show your result";
-	showResultsText.className = "resultsH1";
-	section.append(showResultsText); */
 
 	//Div
 	let div = createDiv("section9Div", "sectionSubmit", section);
@@ -214,10 +169,8 @@ function createSubmitResultsSection() {
 
 	//calculate results when btn is clicked
 	resultbutton.addEventListener("click",  waitForResultSection);
-	// resultbutton.addEventListener("click", sendResultToFirebase);
 }
 
-// console.log(resultCategory);
 
 // TODO finish this function, find a way to access keys from json to compare
 const movieObject = async () => {
@@ -258,15 +211,15 @@ async function createResultSection() {
 	let posterDiv = createDiv("posterDiv", "sectionResults", containerDiv);
 	let infoDiv = createDiv("movieDiv", "sectionResults", containerDiv);
 
-	//p "Your category is..." ( result from get category)
 	let heading = document.createElement("h2");
-	heading.innerHTML = "You should watch this movie:";
-	// heading.innerHTML = "Your category is ";
+  heading.innerHTML = "You should watch this movie:";
+  
 	posterDiv.innerHTML = `<img src="${movie.moviePoster}">`;
 	infoDiv.innerHTML = `<h2>${movie.movieName}</h2> <p>${movie.movieYear}</p>`;
 	section.append(containerDiv);
 	
 }
+
 async function waitForResultSection() {
 	await createResultSection();
 	window.location.href = "#section10";

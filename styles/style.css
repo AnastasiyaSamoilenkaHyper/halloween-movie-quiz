@@ -16,7 +16,7 @@ h1 {
   color: #ff9900;
   font-size: 4em;
   text-align: center;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   letter-spacing: 5px;
 }
 
@@ -46,11 +46,12 @@ button {
     font-size: 1em;
   }
 }
+
 label {
   color: #fff;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   border-radius: 15px;
   height: 2em;
@@ -59,13 +60,15 @@ input[type=text] {
 
 body {
   background-color: #210026;
+  background: -webkit-gradient(linear, left top, left bottom, from(#290030), to(#210026));
   background: linear-gradient(180deg, #290030 0%, #210026 100%);
 }
 
 /* ------------------- */
 * {
   /* margin: 0; */
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -74,14 +77,23 @@ html {
 
 section,
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* FIRST SECTION      */
-input[type=text] {
+input[type="text"] {
   font-size: 2rem;
 }
 
@@ -124,9 +136,12 @@ section {
 }
 
 .answer_wrapper {
+  display: -ms-grid;
   display: grid;
-  align-content: center;
-  grid-template-columns: auto auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
   grid-gap: 2rem;
 }
 
@@ -141,22 +156,22 @@ section {
   .answer_wrapper {
     grid-gap: 0.5rem;
   }
-
   .answers {
     width: 12rem;
     height: 12rem;
   }
 }
+
 @media screen and (max-width: 481px) {
   .answer_wrapper {
     grid-gap: 0.5rem;
   }
-
   .answers {
     width: 9rem;
     height: 9rem;
   }
 }
+
 a {
   border-radius: 15px;
 }
@@ -182,18 +197,21 @@ body {
 }
 
 #section10-wrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
 }
+
 #section10-wrapper #posterDiv img {
   width: 100%;
 }
 
 @media screen and (max-width: 481px) {
   #section10-wrapper {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

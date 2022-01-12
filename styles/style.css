@@ -64,9 +64,7 @@ body {
   background: linear-gradient(180deg, #290030 0%, #210026 100%);
 }
 
-/* ------------------- */
 * {
-  /* margin: 0; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -92,13 +90,11 @@ form {
           align-items: center;
 }
 
-/* FIRST SECTION      */
 input[type="text"] {
   font-size: 2rem;
 }
 
 label {
-  /* font-size: 2rem; */
   margin-bottom: 1em;
 }
 
@@ -129,10 +125,8 @@ a {
   margin-top: 4rem;
 }
 
-/* SECOND SECTION   */
 section {
   height: 100vh;
-  /* 	background-image: repeating-linear-gradient(145deg, #ff9900, #515151); */
 }
 
 .answer_wrapper {
@@ -176,10 +170,6 @@ a {
   border-radius: 15px;
 }
 
-/* html,
-body {
-	overflow: hidden;
-} */
 .resultsH1 {
   font-size: 2.5rem;
 }

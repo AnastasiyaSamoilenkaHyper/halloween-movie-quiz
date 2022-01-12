@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@300&display=swap");
+
 * {
 	font-family: "Roboto", sans-serif;
 }
+
 h1,
 h2 {
 	font-family: "Creepster", cursive;
 }
+
 .resultbutton {
 	font-family: "Creepster", cursive;
 }
+
 h1 {
 	color: #ff9900;
 	font-size: 4em;
@@ -17,6 +21,7 @@ h1 {
 		1px 1px 0 #fff;
 	letter-spacing: 5px;
 }
+
 h2 {
 	font-size: 3em;
 }
@@ -24,11 +29,13 @@ h2,
 p {
 	color: #fff;
 }
+
 #movieDiv {
 	p {
 		font-size: 2em;
 	}
 }
+
 label,
 button {
 	font-family: "Roboto", sans-serif;
@@ -36,27 +43,29 @@ button {
 	cursor: pointer;
 	border: none;
 }
+
 @media screen and (max-width: 481px) {
 	button {
 		font-size: 1em;
 	}
 }
+
 label {
 	color: #fff;
 }
+
 input[type="text"] {
 	width: 100%;
 	border-radius: 15px;
 	height: 2em;
 	padding-left: 0.5em;
 }
+
 body {
 	background-color: #210026;
 	background: linear-gradient(180deg, #290030 0%, #210026 100%);
 }
-/* ------------------- */
 * {
-	/* margin: 0; */
 	box-sizing: border-box;
 }
 
@@ -72,18 +81,11 @@ form {
 	align-items: center;
 }
 
-/* FIRST SECTION      */
-// #section_start {
-// 	height: 100vh;
-// 	background-image: repeating-linear-gradient(145deg, #ff9900, #515151);
-// }
-
 input[type="text"] {
 	font-size: 2rem;
 }
 
 label {
-	/* font-size: 2rem; */
 	margin-bottom: 1em;
 }
 
@@ -114,10 +116,8 @@ a {
 	margin-top: 4rem;
 }
 
-/* SECOND SECTION   */
 section {
 	height: 100vh;
-	/* 	background-image: repeating-linear-gradient(145deg, #ff9900, #515151); */
 }
 
 .answer_wrapper {
@@ -132,9 +132,8 @@ section {
 	width: 15rem;
 	height: 15rem;
 	border-radius: 15px;
-	//margin: 1rem;
-	//margin-top: 2rem;
 }
+
 @media screen and (max-width: 521px) {
 	.answer_wrapper {
 		grid-gap: 0.5rem;
@@ -144,6 +143,7 @@ section {
 		height: 12rem;
 	}
 }
+
 @media screen and (max-width: 481px) {
 	.answer_wrapper {
 		grid-gap: 0.5rem;
@@ -156,13 +156,6 @@ section {
 a {
 	border-radius: 15px;
 }
-
-// Disables scroll and keeps the smooth scroll on pressing a button.
-// And sometimes messes up the height of section_start
-/* html,
-body {
-	overflow: hidden;
-} */
 
 .resultsH1 {
 	font-size: 2.5rem;
@@ -179,6 +172,7 @@ body {
 	padding: 1rem;
 	border-radius: 15px;
 }
+
 #section10-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -189,6 +183,7 @@ body {
 		}
 	}
 }
+
 @media screen and (max-width: 481px) {
 	#section10-wrapper {
 		grid-template-columns: 1fr;

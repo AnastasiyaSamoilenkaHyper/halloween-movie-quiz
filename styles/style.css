@@ -8,10 +8,6 @@ h2 {
   font-family: "Creepster", cursive;
 }
 
-.resultbutton {
-  font-family: "Creepster", cursive;
-}
-
 h1 {
   color: #ff9900;
   font-size: 4em;
@@ -111,18 +107,17 @@ label {
 }
 
 .resultbutton {
+  font-family: "Creepster", cursive;
   text-align: center;
-  padding: 100%;
+  padding: 1rem;
   margin-top: 7rem;
   background-color: white;
   font-size: 2rem;
   margin-top: 1rem;
   width: 25rem;
   border-radius: 15px;
-}
-
-a {
-  margin-top: 4rem;
+  color: black;
+  text-decoration: none;
 }
 
 section {
@@ -147,43 +142,19 @@ section {
 }
 
 @media screen and (max-width: 521px) {
-  .answer_wrapper {
-    grid-gap: 0.5rem;
-  }
   .answers {
     width: 12rem;
     height: 12rem;
   }
 }
 
-@media screen and (max-width: 481px) {
-  .answer_wrapper {
-    grid-gap: 0.5rem;
-  }
-  .answers {
-    width: 9rem;
-    height: 9rem;
-  }
-}
-
 a {
   border-radius: 15px;
+  margin-top: 4rem;
 }
 
 .resultsH1 {
   font-size: 2.5rem;
-}
-
-.resultbutton {
-  background-color: white;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  font-size: 2rem;
-  margin-top: 1rem;
-  width: 100%;
-  padding: 1rem;
-  border-radius: 15px;
 }
 
 #section10-wrapper {
@@ -199,6 +170,13 @@ a {
 }
 
 @media screen and (max-width: 481px) {
+  .answer_wrapper {
+    grid-gap: 0.5rem;
+  }
+  .answers {
+    width: 9rem;
+    height: 9rem;
+  }
   #section10-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
